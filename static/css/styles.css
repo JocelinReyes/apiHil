@@ -1,0 +1,109 @@
+/* Fondo de la página con lila degradado */
+body {
+    background: linear-gradient(to right, #d3cce3, #e9e4f0);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Título principal */
+h1 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #5e4b8b; /* tono lila más fuerte para el título */
+}
+
+/* Tarjeta principal */
+.card {
+    border: none;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Inputs */
+input.form-control {
+    border-radius: 0.75rem;
+    border: 2px solid #ddd;
+    transition: border-color 0.3s;
+}
+
+input.form-control:focus {
+    border-color: #a18cd1; /* lila medio */
+    box-shadow: none;
+}
+
+/* Botones */
+button.btn {
+    border-radius: 0.75rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button.btn-light {
+    background-color: #f8f9fa;
+    color: #5e4b8b;
+}
+
+button.btn-primary {
+    background-color: #a18cd1;
+    border-color: #a18cd1;
+}
+
+button.btn-primary:hover {
+    background-color: #7e63b7;
+}
+
+button.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Resultado */
+#resultado .alert {
+    border-radius: 0.75rem;
+    font-size: 1.1rem;
+}
+
+/* Animación sutil */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeInUp 1s ease;
+}
+
+/* Mejor espacio entre inputs agregados */
+#ciudades .row {
+    margin-bottom: 10px;
+}
+/* Animación para mostrar el resultado */
+@keyframes fadeInZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#resultado .alert {
+    animation: fadeInZoom 0.8s ease forwards;
+}
